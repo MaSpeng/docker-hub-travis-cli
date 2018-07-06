@@ -15,6 +15,6 @@ RUN apk add --no-cache --virtual .persistent-deps \
 RUN gem install travis --version "${TRAVIS_CLI_VERSION}" \
     && apk del .build-deps
 
-ENTRYPOINT [ "travis" ]
+ENTRYPOINT ["travis"]
 
-CMD [ "--help" ]
+CMD ["--help"]
