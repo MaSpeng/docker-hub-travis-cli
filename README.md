@@ -4,7 +4,7 @@
 This docker image includes the command line client to interact with a Travis CI service. It works with [travis-ci.org](https://travis-ci.org), [travis-ci.com](https://travis-ci.com) or any custom Travis CI setup you might have.
 
 ## Supported tags and respective Dockerfile links
-* `1.8`, `latest` [(1.8/Dockerfile)](https://github.com/maspeng/docker-hub-travis/blob/master/1.8/Dockerfile)
+* `1.8`, `latest` [(1.8/Dockerfile)](https://github.com/maspeng/docker-hub-travis-cli/blob/master/1.8/Dockerfile)
 
 ## How to use this image
 To use the `Travis cli` you can do the following.
@@ -14,6 +14,7 @@ $ docker run \
     --rm \
     --interactive \
     --tty \
+    --workdir /app \
     --volume "$(pwd)":/app \
     maspeng/travis-cli
 ```
@@ -25,6 +26,7 @@ $ docker run \
     --rm \
     --interactive \
     --tty \
+    --workdir /app \
     --volume ~/.travis:/root/.travis \
     --volume "$(pwd)":/app \
     maspeng/travis-cli
