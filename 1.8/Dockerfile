@@ -1,6 +1,6 @@
 FROM ruby:2.5-alpine3.7
 
-ENV TRAVIS_CLI_VERSION 1.8.8
+ENV TRAVIS_CLI_VERSION 1.8.9
 
 # Install build dependencies
 RUN apk add --no-cache --virtual .build-deps \
